@@ -20,6 +20,14 @@ public class JfrmPaciente extends javax.swing.JFrame {
         OcultarPanel();
     }
     
+    public void Limpiar() {
+        txt_Identificacion.setText("");
+        txt_Nombre.setText("");
+        txt_Apellido.setText("");
+        txt_telefono.setText("");
+        txt_Identificacion.setFocusable(true);
+    }
+    
     protected void OcultarPanel()
     {
         pnlPaciente.setVisible(false);
@@ -34,6 +42,7 @@ public class JfrmPaciente extends javax.swing.JFrame {
         Paciente[fil][2] = txt_Apellido.getText();
         Paciente[fil][3] = txt_telefono.getText();
         fil++;
+         Limpiar();
     }
      
        protected void GuardarRegistroAfiliacion()
